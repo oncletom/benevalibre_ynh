@@ -173,6 +173,10 @@ ynh_system_user_create --username=$app
 #=================================================
 app_secret_key=$(head -c50 /dev/urandom | base64)
 
+# Add extra module to support SSOWat
+cp -R ../sources/patches/benevalibre_ynh $final_path
+
+# Configure app
 cp ../sources/extra_files/app/config.env "$final_path/config.env"
 ynh_replace_string --match_string="__FINALPATH__" --replace_string="$final_path" --target_file="$final_path/config.env"
 ynh_replace_string --match_string="__APP__" --replace_string="$app" --target_file="$final_path/config.env"
