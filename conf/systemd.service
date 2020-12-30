@@ -1,5 +1,6 @@
 [Unit]
-Description=Small description of the service
+Description=__APP__ HTTP service
+Requires=__APP__.socket
 After=network.target
 
 [Service]
@@ -7,7 +8,7 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__FINALPATH__/
-ExecStart=__FINALPATH__/script >> /var/log/__APP__/__APP__.log 2>&1
+ExecStart=__FINALPATH__/venv/bin/gunicorn benevalibre.wsgi:application --workers __APP_WORKERS_COUNT__ --bind unix:__FINALPATH__/__APP__.sock
 
 [Install]
 WantedBy=multi-user.target
