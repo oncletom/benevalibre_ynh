@@ -5,7 +5,7 @@
 #=================================================
 
 # dependencies used by the app
-pkg_dependencies="deb1 deb2 php$YNH_DEFAULT_PHP_VERSION-deb1 php$YNH_DEFAULT_PHP_VERSION-deb2"
+pkg_dependencies="python3-venv python3-dev python3-pip python3-mysqldb libmariadb-dev"
 
 #=================================================
 # PERSONAL HELPERS
