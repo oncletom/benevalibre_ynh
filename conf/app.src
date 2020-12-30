@@ -1,7 +1,7 @@
-SOURCE_URL=url of app's source
-SOURCE_SUM=sha256 checksum
+SOURCE_URL=https://forge.cliss21.org/cliss21/benevalibre/archive/v1.1.0.tar.gz
+SOURCE_SUM=55a658916e95ca8cc5de0e6f5f48d9e01ba5cbb6d9df5a82959052790a3bb3c8
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=
+SOURCE_FILENAME=v1.1.0.tar.gz
 SOURCE_EXTRACT=true
